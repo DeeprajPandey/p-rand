@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
+from random import choice
 
 image_urls = [
 			'https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/source.gif',
@@ -14,7 +15,7 @@ api = Api(app)
 class Gif(Resource):
 	def get(self):
 		return {
-			'url': image_urls[0]
+			'url': choice(image_urls)
 		}
 api.add_resource(Gif, '/')
 
