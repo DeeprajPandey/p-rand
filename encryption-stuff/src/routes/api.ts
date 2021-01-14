@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 // import bcrypt from 'bcrypt';
 import Joi from 'joi';
 
@@ -12,20 +12,12 @@ const passSchema = Joi.object().keys({
 });
 
 api.route('/v1/encrypt')
-.post(async (req, res) => {
-  try {
-    await passSchema.validateAsync(req.body);
-    
-    res.status(200).json({ 'response': '☕️ huehuehue' });
-  } catch(err) {
-    let msgs: any[] = [];
-
-    err.details.forEach((erObj: any) => {
-      msgs.push(erObj.message);
+.post(async (req: Request, res: Response, next) => {
+    passSchema.validateAsync(req.body)
+    .then(() => {
+      res.status(200).json({ 'response': '☕️ huehuehue' });
     })
-
-    res.status(401).json(msgs);
-  }
+    .catch(next);
 
 });
 
