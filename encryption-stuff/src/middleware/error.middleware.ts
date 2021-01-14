@@ -14,5 +14,13 @@ export const errorHandler = (
   const status = error.statusCode || 500;
   const message = error.message || `It's not you, it's us.`;
 
-  response.status(status).send(message);
+  if (process.env.NODE_ENV == 'development') {
+    response.status(status).json({
+      message: message,
+      '🥞': error.stack
+    });
+  }
+  response.status(status).json({
+    message: message
+  });
 };
