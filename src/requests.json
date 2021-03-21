@@ -210,13 +210,9 @@
         "endIndex": 8
       },
       "textStyle": {
-        "bold": true,
-        "weightedFontFamily": {
-          "fontFamily": "EB Garamond",
-          "weight": 700
-        }
+        "bold": true
       },
-      "fields": "bold,weightedFontFamily"
+      "fields": "bold"
     }
   },
   {
@@ -224,7 +220,7 @@
       "location": {
         "index": 1
       },
-      "text": "\nReaders:\n \n \n"
+      "text": "\nReaders:\na\nb\n"
     }
   },
   {
@@ -233,7 +229,7 @@
         "startIndex": 1,
         "endIndex": 14
       },
-      "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"
+      "bulletPreset": "NUMBERED_DECIMAL_ALPHA_ROMAN"
     }
   },
   {
