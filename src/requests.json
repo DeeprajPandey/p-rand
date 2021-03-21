@@ -155,6 +155,23 @@
     }
   },
   {
+    "updateTableRowStyle": {
+      "tableStartLocation": {
+        "index": 2
+      },
+      "rowIndices": [
+        5
+      ],
+      "tableRowStyle": {
+        "minRowHeight": {
+          "magnitude": 175,
+          "unit": "PT"
+        }
+      },
+      "fields": "*"
+    }
+  },
+  {
     "insertText": {
       "location": {
         "index": 1
