@@ -26,6 +26,79 @@
     }
   },
   {
+    "insertTable": {
+      "rows": 6,
+      "columns": 3,
+      "location": {
+        "index": 1
+      }
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 5
+      },
+      "text": "Evaluation Categories"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 28
+      },
+      "text": "Reader 1"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 38
+      },
+      "text": "Reader 2"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 49
+      },
+      "text": "Fit with the programme"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 78
+      },
+      "text": "Intellectual Preparedness\nHow well read the applicant is and how conversant with the field"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 175
+      },
+      "text": "Quality of Ideas"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 198
+      },
+      "text": "Writing Ability"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 220
+      },
+      "text": "X Factor"
+    }
+  },
+  {
     "insertText": {
       "location": {
         "index": 1
