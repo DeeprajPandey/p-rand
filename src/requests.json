@@ -220,7 +220,19 @@
       "location": {
         "index": 1
       },
-      "text": "\nReaders:\na\nb\n"
+      "text": "\nReaders:\nX\nY\n"
+    }
+  },
+  {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 11,
+        "endIndex": 14
+      },
+      "textStyle": {
+        "bold": false
+      },
+      "fields": "bold"
     }
   },
   {
