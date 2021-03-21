@@ -99,6 +99,32 @@
     }
   },
   {
+    "updateTableColumnProperties": {
+      "tableStartLocation": {"index": 2},
+      "columnIndices": [],
+      "tableColumnProperties": {
+        "widthType": "FIXED_WIDTH",
+        "width": {
+          "magnitude": 100,
+          "unit": "PT"
+        }
+      },
+      "fields": "*"
+    },
+    "updateTableColumnProperties": {
+      "tableStartLocation": {"index": 2},
+      "columnIndices": [0],
+      "tableColumnProperties": {
+        "widthType": "FIXED_WIDTH",
+        "width": {
+          "magnitude": 200,
+          "unit": "PT"
+        }
+      },
+      "fields": "*"
+    }
+  },
+  {
     "insertText": {
       "location": {
         "index": 1
