@@ -99,6 +99,22 @@
     }
   },
   {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 105,
+        "endIndex": 168
+      },
+      "textStyle": {
+        "fontSize": {
+          "magnitude": 9,
+          "unit": "PT"
+        },
+        "italic": true
+      },
+      "fields": "italic,fontSize"
+    }
+  },
+  {
     "insertText": {
       "location": {
         "index": 175
@@ -131,7 +147,7 @@
       "tableColumnProperties": {
         "widthType": "FIXED_WIDTH",
         "width": {
-          "magnitude": 100,
+          "magnitude": 150,
           "unit": "PT"
         }
       },
@@ -147,7 +163,7 @@
       "tableColumnProperties": {
         "widthType": "FIXED_WIDTH",
         "width": {
-          "magnitude": 200,
+          "magnitude": 230,
           "unit": "PT"
         }
       },
