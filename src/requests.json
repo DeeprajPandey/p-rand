@@ -38,7 +38,7 @@
       "location": {
         "index": 1
       },
-      "text": "Rubric\n"
+      "text": "\nRubric\n"
     }
   },
   {
@@ -62,7 +62,24 @@
       "location": {
         "index": 1
       },
-      "text": "\nReaders:\n\n"
+      "text": "\nReaders:\n \n \n"
+    }
+  },
+  {
+    "createParagraphBullets": {
+      "range": {
+        "startIndex": 1,
+        "endIndex": 14
+      },
+      "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"
+    }
+  },
+  {
+    "deleteParagraphBullets": {
+      "range": {
+        "startIndex": 1,
+        "endIndex": 10
+      }
     }
   },
   {
