@@ -131,23 +131,6 @@
     }
   },
   {
-    "updateTableRowStyle": {
-      "tableStartLocation": {
-        "index": 2
-      },
-      "rowIndices": [
-        0
-      ],
-      "tableRowStyle": {
-        "minRowHeight": {
-          "magnitude": 18,
-          "unit": "PT"
-        }
-      },
-      "fields": "*"
-    }
-  },
-  {
     "insertText": {
       "location": {
         "index": 1
