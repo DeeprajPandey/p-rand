@@ -1,12 +1,13 @@
-from __future__ import print_function
 import os.path
+import json
+from urllib.error import HTTPError
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
+SCOPES = ['https://www.googleapis.com/auth/drive']
 
 # The ID of a sample document.
 DOCUMENT_ID = '195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE'
@@ -35,15 +36,30 @@ def main():
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
 
-    with build('docs', 'v1', credentials=creds) as service:
-        # Retrieve the documents contents from the Docs service.
-        request = service.documents().get(documentId=DOCUMENT_ID)
-        try:
-            document = request.execute()
-            print('The title of the document is: {}'.format(document.get('title')))
-        except HttpError as e:
-            print('Error response status code: {0}\nreason: {1}', format(
-                e.status_code, e.error_details))
+    requests = None
+    if os.path.exists('requests.json'):
+        with open('requests.json', 'r') as req:
+            requests = json.load(req)
+    if not requests:
+        print('Invalid requests file.')
+    else:
+        with build('docs', 'v1', credentials=creds) as service:
+            try:
+                result = service.documents().batchUpdate(
+                    documentId=TESTD_ID, body={'requests': requests}).execute()
+                print(result)
+
+                # Retrieve the documents contents from the Docs service.
+                # request = service.documents().get(documentId=TESTD_ID)
+                # document = request.execute()
+                # print('The title of the document is: {}'.format(
+                #     document.get('title')))
+
+                # Print full response object
+                # print(json.dumps(document, sort_keys=True, indent=4))
+            except HTTPError as e:
+                print('Error response status code: {0}\nreason: {1}', format(
+                    e.status_code, e.error_details))
 
 
 if __name__ == '__main__':
