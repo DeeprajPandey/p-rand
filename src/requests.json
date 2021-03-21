@@ -1,0 +1,84 @@
+[
+  {
+    "insertPageBreak": {
+      "location": {
+        "index": 1
+      }
+    }
+  },
+  {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 1,
+        "endIndex": 2
+      },
+      "textStyle": {
+        "fontSize": {
+          "magnitude": 12,
+          "unit": "PT"
+        },
+        "weightedFontFamily": {
+          "fontFamily": "EB Garamond",
+          "weight": 400
+        }
+      },
+      "fields": "fontSize,weightedFontFamily"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 1
+      },
+      "text": "Grading scale (0-5)\n0 - useless\n1 - poor\n2 - below average\n3 - average\n4 - above average\n5 - exceptional\n"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 1
+      },
+      "text": "Rubric\n"
+    }
+  },
+  {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 1,
+        "endIndex": 8
+      },
+      "textStyle": {
+        "bold": true,
+        "weightedFontFamily": {
+          "fontFamily": "EB Garamond",
+          "weight": 700
+        }
+      },
+      "fields": "bold,weightedFontFamily"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 1
+      },
+      "text": "\nReaders:\n\n"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 1
+      },
+      "text": "Applicant Name: \n"
+    }
+  },
+  {
+    "insertText": {
+      "location": {
+        "index": 1
+      },
+      "text": "Application Number: \n"
+    }
+  }
+]
