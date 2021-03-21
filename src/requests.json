@@ -35,6 +35,18 @@
     }
   },
   {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 5,
+        "endIndex": 46
+      },
+      "textStyle": {
+        "bold": true
+      },
+      "fields": "bold"
+    }
+  },
+  {
     "insertText": {
       "location": {
         "index": 5
@@ -56,6 +68,18 @@
         "index": 38
       },
       "text": "Reader 2"
+    }
+  },
+  {
+    "updateTextStyle": {
+      "range": {
+        "startIndex": 49,
+        "endIndex": 228
+      },
+      "textStyle": {
+        "bold": false
+      },
+      "fields": "bold"
     }
   },
   {
