@@ -100,7 +100,9 @@
   },
   {
     "updateTableColumnProperties": {
-      "tableStartLocation": {"index": 2},
+      "tableStartLocation": {
+        "index": 2
+      },
       "columnIndices": [],
       "tableColumnProperties": {
         "widthType": "FIXED_WIDTH",
@@ -112,8 +114,12 @@
       "fields": "*"
     },
     "updateTableColumnProperties": {
-      "tableStartLocation": {"index": 2},
-      "columnIndices": [0],
+      "tableStartLocation": {
+        "index": 2
+      },
+      "columnIndices": [
+        0
+      ],
       "tableColumnProperties": {
         "widthType": "FIXED_WIDTH",
         "width": {
