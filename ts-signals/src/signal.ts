@@ -15,18 +15,19 @@ interface ISignal {
 }
 
 // Signal is essentially an observer subject with methods to update state + sub and unsub
-export function createSignal(payload: TPayload): ISignal & {sub: (agent: ISubscriber) => boolean, unsub: (agent: ISubscriber) => boolean} {
+export function createSignal(payload: TPayload): ISignal {
     let data: TPayload = payload;
     let observers: ISubscriber[] = [];
 
-    const getter = () => data;
     const setter = (pl: TPayload) => {
         data = pl;
         // TODO: notify subscribers
         observers.forEach(agent => agent.update());
     }
 
-    const sub = (agent: ISubscriber): boolean => {
+    const getter = () => data;
+
+    getter.sub = (agent: ISubscriber): boolean => {
         if (!observers.includes(agent)) {
             observers.push(agent);
             // DEBUG
@@ -35,7 +36,7 @@ export function createSignal(payload: TPayload): ISignal & {sub: (agent: ISubscr
         }
         return false;
     }
-    const unsub = (agent: ISubscriber): boolean => {
+    getter.unsub = (agent: ISubscriber): boolean => {
         const index = observers.indexOf(agent);
         if (index !== -1) {
             observers.splice(index, 1);
@@ -49,9 +50,7 @@ export function createSignal(payload: TPayload): ISignal & {sub: (agent: ISubscr
 
     return {
         getter,
-        setter,
-        sub,
-        unsub
+        setter
     };
 }
 
