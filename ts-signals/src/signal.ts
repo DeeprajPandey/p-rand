@@ -21,7 +21,6 @@ export function createSignal(payload: TPayload): ISignal {
 
     const setter = (pl: TPayload) => {
         data = pl;
-        // TODO: notify subscribers
         observers.forEach(agent => agent.update());
     }
 
