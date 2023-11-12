@@ -23,6 +23,7 @@ export function createSignal(payload: TPayload): ISignal & {sub: (agent: ISubscr
     const setter = (pl: TPayload) => {
         data = pl;
         // TODO: notify subscribers
+        observers.forEach(agent => agent.update());
     }
 
     const sub = (agent: ISubscriber): boolean => {
