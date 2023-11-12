@@ -1,7 +1,12 @@
-import { createSignal } from './signal';
+import { createSignal, createSubscriber } from './signal';
 
 function testSignals(): void {
-    const {getter: points, setter: setPoints} = createSignal(42);
+    const {getter: points, setter: setPoints, sub, unsub} = createSignal(42);
+
+    const logger = createSubscriber(() => {
+        console.log(points());
+    });
+
     
     // TEMP: should print 42
     console.log(points());
